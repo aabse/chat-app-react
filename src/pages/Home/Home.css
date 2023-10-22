@@ -1,0 +1,27 @@
+section.home {
+  display: grid;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  box-sizing: content-box;
+  grid-template-rows: 1fr 8fr 1fr;
+  }
+
+.home .home__header {
+  position: relative;
+  background-color: blue;
+}
+
+.home .home__body {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.home .home__footer {
+  position: relative;
+  background-color: yellow;
+}

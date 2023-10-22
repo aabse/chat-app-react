@@ -1,0 +1,24 @@
+.chat {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: pink;
+  color: #fff;
+  height: 100%;
+  min-width: 420px;
+}
+
+.chat .chat__header {
+  height: 50px;
+  width: 100%;
+  background-color: #d3d;
+}
+
+.chat .chat__messages {
+  flex-grow: 1;
+}
+
+.chat .chat__new-message {
+  height: 50px;
+  background-color: #e4f;
+}
