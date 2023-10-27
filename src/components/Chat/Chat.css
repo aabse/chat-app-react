@@ -18,6 +18,25 @@
   flex-grow: 1;
 }
 
+.chat .chat__messages ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.chat .chat__messages ul li {
+  border-radius: 15px;
+  background-color: lightgrey;
+  padding: 8px;
+}
+
+.chat .chat__messages li:nth-child(even) {
+  background-color: green;
+}
+
 .chat .chat__new-message {
   height: 50px;
   background-color: #e4f;
