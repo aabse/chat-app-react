@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { login } from '../../services/auth'
 import './Login.css'
 
 export default function Login() {
@@ -7,8 +8,17 @@ export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const submitLogin = () => {
-    navigate('/home')
+  const submitLogin = (event) => {
+    event.preventDefault()
+    login({email,password})
+    .then(res => {
+      console.log(res)
+      navigate('/home')
+    })
+    .catch(error => {
+      console.log(error)
+    })
+    //navigate('/home')
   }
 
   return (
@@ -16,10 +26,10 @@ export default function Login() {
       <form onSubmit={submitLogin}>
         <div className='form__inputs'>
           <div className='form__input'>
-            <input type="text" name="email" id="email" placeholder='Email' onChange={setEmail} value={email} />
+            <input type="text" name="email" id="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className='form__input'>
-            <input type="password" name="password" id="password" placeholder='Password' onChange={setPassword} value={password} />
+            <input type="password" name="password" id="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
           </div>
         </div>
         <button type="submit">Signin</button>

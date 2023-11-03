@@ -1,0 +1,13 @@
+.contacts {
+  width: 100%;
+  padding: 40px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li.contact {
+  height: 20px;
+}
