@@ -15,8 +15,8 @@ section.home {
 
 .home .home__body {
   background-color: green;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
 
 }

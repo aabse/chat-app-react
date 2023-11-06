@@ -19,7 +19,6 @@ function App() {
           path='/home'
           element={ <Home /> } />
       </Routes>
-      <Login />
     </BrowserRouter>
   )
 }
