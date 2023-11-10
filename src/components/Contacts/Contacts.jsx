@@ -3,7 +3,7 @@ import { usersService } from '../../services/users'
 import * as roomsService from '../../services/rooms.js'
 import './Contacts.css'
 
-export default function Contacts() {
+export default function Contacts({updateRoomSelected}) {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Contacts() {
     console.log(user)
     roomsService.getRoom(user._id)
       .then(res => {
-        console.log(res)
+        updateRoomSelected(res._id)
       })
   }
 

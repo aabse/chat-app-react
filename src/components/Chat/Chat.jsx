@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Chat.css'
-import { socket } from '../../socket.js'
+import * as messagesService from '../../services/messages.js'
+import { SocketContext } from '../../context/socketContext'
 
-export default function Chat() {
+export default function Chat({roomId}) {
 
   const [listMessages, setListMessages] = useState([])
   const [message, setMessage] = useState('')
+  const socket = useContext(SocketContext)
 
   useEffect(() => {
     socket.on('chat message', msg => {
+      console.log('receving new message')
       console.log(msg)
       setListMessages(prevListMessages => [...prevListMessages, msg])
     })
@@ -20,13 +23,18 @@ export default function Chat() {
 
   const sendMessage = (event) => {
     event.preventDefault()
-    socket.emit('chat message', message)
-    console.log(listMessages)
+    messagesService.newMessage(roomId,message)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   return (
     <section className="chat">
-      <div className='chat__header'>chat header</div>
+      <div className='chat__header'>{roomId}</div>
       <div className='chat__messages'>
         <ul>
           {listMessages.map(msg => (
