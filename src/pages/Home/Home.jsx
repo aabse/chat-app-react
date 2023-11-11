@@ -6,21 +6,26 @@ import './Home.css'
 
 export default function Home() {
 
-  const [roomSelected, setRoomSelected] = useState('')
+  const [roomSelected, setRoomSelected] = useState()
+  const [roomName, setRoomName] = useState('')
   const socket = useContext(SocketContext)
 
-  const updateRoomSelected = (roomId) => {
+  const updateRoomSelected = (room) => {
     socket.emit('leave room', roomSelected)
-    socket.emit('join room', roomId)
-    setRoomSelected(roomId)
+    socket.emit('join room', room._id)
+    setRoomSelected(room)
+  }
+
+  const updateRoomName = (name) => {
+    setRoomName(name)
   }
 
   return (
     <section className='home'>
       <div className="home__header"></div>
       <div className="home__body">
-        <Contacts updateRoomSelected={updateRoomSelected} />
-        <Chat roomId={roomSelected} />
+        <Contacts updateRoomName={updateRoomName} updateRoomSelected={updateRoomSelected} />
+        <Chat room={roomSelected} roomName={roomName} />
       </div>
       <div className="home__footer"></div>
     </section>

@@ -3,7 +3,7 @@ import './Chat.css'
 import * as messagesService from '../../services/messages.js'
 import { SocketContext } from '../../context/socketContext'
 
-export default function Chat({roomId}) {
+export default function Chat({room, roomName}) {
 
   const [listMessages, setListMessages] = useState([])
   const [message, setMessage] = useState('')
@@ -21,9 +21,15 @@ export default function Chat({roomId}) {
     }
   }, [])
 
+  useEffect(() => {
+    console.log(room?.messages)
+    const initialMessages = room?.messages.map(msg => msg.message) || []
+    setListMessages([...initialMessages])
+  }, [room])
+
   const sendMessage = (event) => {
     event.preventDefault()
-    messagesService.newMessage(roomId,message)
+    messagesService.newMessage(room?._id,message)
       .then(res => {
         console.log(res)
       })
@@ -34,11 +40,11 @@ export default function Chat({roomId}) {
 
   return (
     <section className="chat">
-      <div className='chat__header'>{roomId}</div>
+      <div className='chat__header'>{roomName}</div>
       <div className='chat__messages'>
         <ul>
-          {listMessages.map(msg => (
-            <li>
+          {listMessages.map((msg,key) => (
+            <li key={key}>
               <span>{msg}</span>
             </li>
           ))}

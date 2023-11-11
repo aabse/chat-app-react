@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../../context/userContext'
 import { login } from '../../services/auth'
 import './Login.css'
 
@@ -7,12 +8,14 @@ export default function Login() {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const user = useContext(UserContext)
 
   const submitLogin = (event) => {
     event.preventDefault()
     login({email,password})
     .then(res => {
       console.log(res)
+      user.setEmail(email)
       navigate('/home')
     })
     .catch(error => {
