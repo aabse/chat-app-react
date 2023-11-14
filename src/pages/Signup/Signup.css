@@ -34,6 +34,17 @@
   font-size: 1.2rem;
 }
 
+.signup form .form__input .error-input {
+  border: 1px solid red;
+}
+
+.signup form .form__input .error-message {
+  display: block;
+  color: red;
+  font-size: small;
+  font-weight: bold;
+}
+
 .signup form button {
   border: 0;
   height: 40px;
