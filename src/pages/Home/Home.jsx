@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Chat from '../../components/Chat/Chat'
 import Contacts from '../../components/Contacts/Contacts'
+import Rooms from '../../components/Rooms/Rooms'
 import { SocketContext } from '../../context/socketContext'
 import './Home.css'
 
@@ -24,6 +25,7 @@ export default function Home() {
     <section className='home'>
       <div className="home__header"></div>
       <div className="home__body">
+        <Rooms />
         <Contacts updateRoomName={updateRoomName} updateRoomSelected={updateRoomSelected} />
         <Chat room={roomSelected} roomName={roomName} />
       </div>
