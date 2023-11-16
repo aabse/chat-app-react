@@ -9,6 +9,7 @@ export default function Contacts({updateRoomName,updateRoomSelected}) {
   const currentUser = useContext(UserContext)
 
   useEffect(() => {
+    console.log(currentUser)
     usersService()
     .then(res => {
       const contacts = res.filter(user => user.email !== currentUser.email)
@@ -18,7 +19,7 @@ export default function Contacts({updateRoomName,updateRoomSelected}) {
 
   const getRoom = (user) => {
     console.log(user)
-    roomsService.getRoom(user._id)
+    roomsService.getRoomByUserId(user._id)
       .then(res => {
         updateRoomSelected(res)
         updateRoomName(user.email)

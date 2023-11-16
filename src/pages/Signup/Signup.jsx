@@ -34,7 +34,8 @@ export default function Signup() {
       signup(data)
         .then(res => {
           console.log(res)
-          user.setEmail(data.email)
+          user.setData(res)
+          window.localStorage.setItem('userData', JSON.stringify(res))
           navigate('/home')
         })
         .catch(error => {

@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Chat.css'
 import * as messagesService from '../../services/messages.js'
 import { SocketContext } from '../../context/socketContext'
+import { UserContext } from '../../context/userContext'
 
 export default function Chat({room, roomName}) {
 
   const [listMessages, setListMessages] = useState([])
   const [message, setMessage] = useState('')
   const socket = useContext(SocketContext)
+  const user = useContext(UserContext)
 
   useEffect(() => {
     socket.on('chat message', msg => {
@@ -40,6 +42,7 @@ export default function Chat({room, roomName}) {
 
   return (
     <section className="chat">
+      {user.data?.email}
       <div className='chat__header'>{roomName}</div>
       <div className='chat__messages'>
         <ul>

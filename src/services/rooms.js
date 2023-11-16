@@ -1,6 +1,17 @@
-export const getRoom = async (id) => {
+export const getRoomByUserId = async (id) => {
   try {
     const response = await fetch(`${import.meta.env.VITE_API_URL}/api/rooms?user=${id}`, {
+      credentials: 'include'
+    })
+    return response.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const getRoomById = async (id) => {
+  try {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/rooms/${id}`, {
       credentials: 'include'
     })
     return response.json()

@@ -15,7 +15,8 @@ export default function Login() {
     login({email,password})
     .then(res => {
       console.log(res)
-      user.setEmail(email)
+      user.setData(res)
+      window.localStorage.setItem('userData', JSON.stringify(res))
       navigate('/home')
     })
     .catch(error => {
