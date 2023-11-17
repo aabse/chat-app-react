@@ -25,7 +25,7 @@ export default function Chat({room, roomName}) {
 
   useEffect(() => {
     console.log(room?.messages)
-    const initialMessages = room?.messages.map(msg => msg.message) || []
+    const initialMessages = room?.messages || []
     setListMessages([...initialMessages])
   }, [room])
 
@@ -40,15 +40,23 @@ export default function Chat({room, roomName}) {
       })
   }
 
+  const classMessage = (idUser) => {
+    if (idUser === user.id) {
+      return 'current'
+    } else {
+      return 'another'
+    }
+  }
+
   return (
     <section className="chat">
-      {user.data?.email}
       <div className='chat__header'>{roomName}</div>
       <div className='chat__messages'>
         <ul>
           {listMessages.map((msg,key) => (
-            <li key={key}>
-              <span>{msg}</span>
+            <li key={key} className={(msg.user === user.data.id)? 'send':'receive'}>
+              <div>{msg.message}</div>
+              <div>{msg.name}</div>
             </li>
           ))}
         </ul>

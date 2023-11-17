@@ -31,10 +31,18 @@
   border-radius: 15px;
   background-color: lightgrey;
   padding: 8px;
+  width: 85%;
 }
 
-.chat .chat__messages li:nth-child(even) {
-  background-color: green;
+.chat .chat__messages ul li.send {
+  border-radius: 20px 20px 3px 20px;
+  align-self: flex-end;
+  background-color: blue;
+}
+
+.chat .chat__messages ul li.receive{
+  border-radius: 20px 20px 20px 3px;
+  background-color: gray;
 }
 
 .chat .chat__new-message {
