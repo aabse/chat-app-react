@@ -6,7 +6,7 @@ section.home {
   background-color: red;
   box-sizing: content-box;
   grid-template-rows: 1fr 8fr 1fr;
-  }
+}
 
 .home .home__header {
   position: relative;
@@ -18,7 +18,7 @@ section.home {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-
+  position: relative;
 }
 
 .home .home__footer {

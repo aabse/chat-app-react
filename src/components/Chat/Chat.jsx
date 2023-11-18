@@ -34,21 +34,15 @@ export default function Chat({room, roomName}) {
     messagesService.newMessage(room?._id,message)
       .then(res => {
         console.log(res)
+        setMessage('')
       })
       .catch(error => {
         console.log(error)
       })
   }
 
-  const classMessage = (idUser) => {
-    if (idUser === user.id) {
-      return 'current'
-    } else {
-      return 'another'
-    }
-  }
-
   return (
+    <div className='wrapper-chat'>
     <section className="chat">
       <div className='chat__header'>{roomName}</div>
       <div className='chat__messages'>
@@ -68,5 +62,6 @@ export default function Chat({room, roomName}) {
         </form>
       </div>
     </section>
+    </div>
   )
 }

@@ -1,6 +1,10 @@
+.wrapper-chat {
+  position: relative;
+}
+
 .chat {
   display: flex;
-  position: relative;
+  position: absolute;
   flex-direction: column;
   background-color: pink;
   color: #fff;
@@ -16,6 +20,7 @@
 
 .chat .chat__messages {
   flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .chat .chat__messages ul {
