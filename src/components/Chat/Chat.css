@@ -16,6 +16,9 @@
   height: 50px;
   width: 100%;
   background-color: #d3d;
+  text-transform: capitalize;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .chat .chat__messages {
@@ -33,10 +36,16 @@
 }
 
 .chat .chat__messages ul li {
+  display: flex;
+  flex-direction: column;
   border-radius: 15px;
   background-color: lightgrey;
   padding: 8px;
   width: 85%;
+}
+
+.chat .chat__messages ul li small.time {
+  align-self: flex-end;
 }
 
 .chat .chat__messages ul li.send {
