@@ -6,7 +6,7 @@
   display: flex;
   position: absolute;
   flex-direction: column;
-  background-color: pink;
+  background-color: #2b4157;
   color: #fff;
   height: 100%;
   min-width: 420px;
@@ -15,7 +15,7 @@
 .chat .chat__header {
   height: 50px;
   width: 100%;
-  background-color: #d3d;
+  background-color: #385674;
   text-transform: capitalize;
   padding: 10px;
   box-sizing: border-box;
@@ -48,6 +48,10 @@
   align-self: flex-end;
 }
 
+.chat .chat__messages ul li small.username {
+  color: lightblue;
+}
+
 .chat .chat__messages ul li.send {
   border-radius: 20px 20px 3px 20px;
   align-self: flex-end;
@@ -60,6 +64,25 @@
 }
 
 .chat .chat__new-message {
-  height: 50px;
-  background-color: #e4f;
+  background-color: #385674;
+}
+
+.chat .chat__new-message form {
+  display: flex;
+}
+
+.chat .chat__new-message form input {
+  flex-grow: 1;
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #4b749f;
+  color: #fff;
+}
+
+.chat .chat__new-message form button {
+  border: none;
+  background-color: #385674;
+  color: #fff;
 }

@@ -14,10 +14,10 @@ ul {
 
 li.room {
   height: 40px;
-  border: 1px solid;
-  border-radius: 15px;
   padding: 10px;
   display: flex;
   align-items: center;
-  background-color: lightgrey;
+  border-bottom: 1px solid;
+  text-transform: capitalize;
+  color: white;
 }

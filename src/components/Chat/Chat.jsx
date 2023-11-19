@@ -10,24 +10,23 @@ export default function Chat({room, roomName}) {
   const [message, setMessage] = useState('')
   const socket = useContext(SocketContext)
   const user = useContext(UserContext)
-
+  const elemMessages = document.getElementById('chat-messages')
+  
   useEffect(() => {
     socket.on('chat message', msg => {
       console.log('receving new message')
       console.log(msg)
       setListMessages(prevListMessages => [...prevListMessages, msg])
-      listMessages.forEach(msg => {
-        console.log(msg)
-        let t = timeMessage(msg.createdAt)
-        console.log(t)
-      })
     })
-
         
     return () => {
       socket.off('chat message')
     }
   }, [])
+
+  useEffect(() => {
+    if (elemMessages) elemMessages.scrollTop = elemMessages.scrollHeight
+  }, [listMessages])
 
   useEffect(() => {
     console.log(room?.messages)
@@ -59,12 +58,13 @@ export default function Chat({room, roomName}) {
     <div className='wrapper-chat'>
     <section className="chat">
       <div className='chat__header'>{roomName}</div>
-      <div className='chat__messages'>
+      <div className='chat__messages' id='chat-messages'>
         <ul>
           {listMessages.map((msg,key) => (
             <li key={key} className={(msg.user === user.data.id)? 'send':'receive'}>
+              <small className='username'>{msg.name}</small>
               <div>{msg.message}</div>
-                <small className='time'>{timeMessage(msg.createdAt)}</small>
+              <small className='time'>{timeMessage(msg.createdAt)}</small>
             </li>
           ))}
         </ul>
