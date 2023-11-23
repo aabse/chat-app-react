@@ -10,7 +10,7 @@
   justify-content: center;
   min-width: 400px;
   min-height: 400px;
-  background-color: #75959a;
+  background-color: #385674;
   border-radius: 15px;
   padding: 40px;
   gap: 30px
@@ -32,6 +32,8 @@
   border: 0;
   height: 40px;
   font-size: 1.2rem;
+  background-color: #4b749f;
+  color: #fff;
 }
 
 .login form button {

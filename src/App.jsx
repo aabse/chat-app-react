@@ -5,6 +5,7 @@ import { UserProvider } from './context/userContext'
 import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Signup from './pages/Signup/Signup'
+import './services/interceptor.js'
 
 function App() {
 
@@ -13,8 +14,11 @@ function App() {
       <UserProvider>
         <BrowserRouter>
           <Routes>
+            <Route
+              path="/"
+              element={ <Login />} />
             <Route 
-              path="/login"
+              path={"/login"}
               element={ <Login /> } />
             <Route
               path="/signup"

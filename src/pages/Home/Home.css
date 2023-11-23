@@ -3,18 +3,15 @@ section.home {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: red;
   box-sizing: content-box;
   grid-template-rows: 1fr 8fr 1fr;
 }
 
 .home .home__header {
   position: relative;
-  background-color: #243748;
 }
 
 .home .home__body {
-  background-color: #243748;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
@@ -23,5 +20,4 @@ section.home {
 
 .home .home__footer {
   position: relative;
-  background-color: #243748;
 }
