@@ -10,6 +10,7 @@ export default function Home() {
 
   const [roomSelected, setRoomSelected] = useState()
   const [roomName, setRoomName] = useState('')
+  const [chatActive, setChatActive] = useState(false)
   const socket = useContext(SocketContext)
   const user = useContext(UserContext)
 
@@ -23,21 +24,26 @@ export default function Home() {
     socket.emit('leave room', roomSelected?._id)
     socket.emit('join room', room._id)
     setRoomSelected(room)
+    setChatActive(true)
   }
 
   const updateRoomName = (name) => {
     setRoomName(name)
   }
 
+  const updateChatActive = (statusChat) => {
+    setChatActive(statusChat)
+  }
+
   return (
     <section className='home'>
       <div className="home__header"></div>
       <div className="home__body">
-        <div>
+        <div className={'rooms-section ' + (chatActive? 'inactive':'active') }>
           <Rooms updateRoomName={updateRoomName} updateRoomSelected={updateRoomSelected} />
           <Contacts updateRoomName={updateRoomName} updateRoomSelected={updateRoomSelected} />
         </div>
-        <Chat room={roomSelected} roomName={roomName} />
+        <Chat room={roomSelected} roomName={roomName} active={chatActive} updateChatActive={updateChatActive} />
       </div>
       <div className="home__footer"></div>
     </section>

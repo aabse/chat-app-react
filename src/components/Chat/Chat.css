@@ -13,12 +13,20 @@
 }
 
 .chat .chat__header {
+  display: flex;
+  align-items: center;
   height: 50px;
   width: 100%;
   background-color: #385674;
   text-transform: capitalize;
   padding: 10px;
   box-sizing: border-box;
+}
+
+.chat .chat__header .back-button {
+  padding: 10px;
+  margin-right: 20px;
+  display: none;
 }
 
 .chat .chat__messages {
@@ -85,4 +93,22 @@
   border: none;
   background-color: #385674;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .wrapper-chat.inactive {
+    display: none;
+  }
+
+  .wrapper-chat.active {
+    display: block;
+  }
+
+  .chat {
+    min-width: 100%;
+  }
+
+  .chat .chat__header .back-button {
+    display: block;
+  }
 }

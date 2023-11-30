@@ -25,6 +25,10 @@ export default function Login() {
     //navigate('/home')
   }
 
+  const goToSignup = () => {
+    navigate('/signup')
+  }
+
   return (
     <section className='login'>
       <form onSubmit={submitLogin}>
@@ -38,7 +42,10 @@ export default function Login() {
             <input type="password" name="password" id="password" onChange={(e) => setPassword(e.target.value)} />
           </div>
         </div>
-        <button type="submit">Login</button>
+        <div className='form__buttons'>
+          <button type="submit" className='login-submit'>Login</button>
+          <a href="javascript:void(0)" onClick={goToSignup} className='signup-link'>Sign up</a>
+        </div>
       </form>
     </section>
   )

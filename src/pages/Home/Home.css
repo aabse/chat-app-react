@@ -21,3 +21,17 @@ section.home {
 .home .home__footer {
   position: relative;
 }
+
+@media (max-width: 768px) {
+  .home .home__body {
+    grid-template-columns: 1fr;
+  }
+
+  .rooms-section.active {
+    display: block;
+  }
+
+  .rooms-section.inactive {
+    display: none;
+  }
+}

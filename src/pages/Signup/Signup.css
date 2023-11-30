@@ -13,7 +13,8 @@
   background-color: #385674;
   border-radius: 15px;
   padding: 40px;
-  gap: 30px
+  gap: 30px;
+  box-sizing: border-box;
 }
 
 .signup form .form__inputs {
@@ -36,6 +37,13 @@
   background-color: #4b749f;
 }
 
+.signup form .form__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
 .signup form .form__input .error-input {
   border: 1px solid red;
 }
@@ -54,4 +62,15 @@
   width: 100%;
   border-radius: 15px;
   font-size: 1.2rem;
+}
+
+.signup form a.button-link {
+  color: #fff;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .signup form {
+    width: 100vw;
+  }
 }

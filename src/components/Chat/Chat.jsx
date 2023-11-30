@@ -4,7 +4,7 @@ import * as messagesService from '../../services/messages.js'
 import { SocketContext } from '../../context/socketContext'
 import { UserContext } from '../../context/userContext'
 
-export default function Chat({room, roomName}) {
+export default function Chat({room, roomName, active, updateChatActive}) {
 
   const [listMessages, setListMessages] = useState([])
   const [message, setMessage] = useState('')
@@ -34,6 +34,10 @@ export default function Chat({room, roomName}) {
     setListMessages([...initialMessages])
   }, [room])
 
+  const handleBackButton = () => {
+    updateChatActive(false)
+  }
+
   const sendMessage = (event) => {
     event.preventDefault()
     messagesService.newMessage(room?._id,message)
@@ -55,9 +59,16 @@ export default function Chat({room, roomName}) {
   }
 
   return (
-    <div className='wrapper-chat'>
+    <div className={'wrapper-chat ' + (active? 'active':'inactive')}>
     <section className="chat">
-      <div className='chat__header'>{roomName}</div>
+      <div className='chat__header'>
+          <div className='back-button' onClick={handleBackButton}>
+            {'<'}
+          </div>
+          <div>
+            {roomName}
+          </div>
+      </div>
       <div className='chat__messages' id='chat-messages'>
         <ul>
           {listMessages.map((msg,key) => (

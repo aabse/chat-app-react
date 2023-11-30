@@ -44,6 +44,9 @@ export default function Signup() {
     }
   })
 
+  const goToLogin = () => {
+    navigate('/login')
+  }
   
   return (
     <section className='signup'>
@@ -75,7 +78,10 @@ export default function Signup() {
 
           </div>
         </div>
-        <button type="submit">Signup</button>
+        <div className='form__buttons'>  
+          <button type="submit" className='button-submit'>Signup</button>
+          <a href="javascript:void(0)" onClick={goToLogin} className='button-link'>Go to Login</a>
+        </div>
       </form>
       <div>
       </div>
