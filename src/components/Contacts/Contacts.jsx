@@ -1,21 +1,26 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { usersService } from '../../services/users'
 import * as roomsService from '../../services/rooms.js'
 import './Contacts.css'
 import { UserContext } from '../../context/userContext'
+import PropTypes from 'prop-types'
+
+Contacts.propTypes = {
+        updateRoomName: PropTypes.func.isRequired,
+        updateRoomSelected: PropTypes.func.isRequired
+}
 
 export default function Contacts({updateRoomName,updateRoomSelected}) {
   const [users, setUsers] = useState([])
   const currentUser = useContext(UserContext)
 
   useEffect(() => {
-    console.log(currentUser)
     usersService()
     .then(res => {
       const contacts = res.filter(user => user.email !== currentUser.email)
       setUsers(contacts)
     })
-  }, [])
+  }, [currentUser])
 
   const getRoom = (user) => {
     console.log(user)

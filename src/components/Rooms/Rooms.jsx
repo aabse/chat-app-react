@@ -1,6 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as roomsService from '../../services/rooms.js'
 import './Rooms.css'
+import PropTypes from 'prop-types'
+
+Rooms.propTypes = {
+        updateRoomName: PropTypes.func.isRequired,
+        updateRoomSelected: PropTypes.func.isRequired,
+}
 
 export default function Rooms({updateRoomName, updateRoomSelected}) {
   const [rooms, setRooms] = useState([])

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/userContext'
 import { login } from '../../services/auth'
@@ -22,7 +22,6 @@ export default function Login() {
     .catch(error => {
       console.log(error)
     })
-    //navigate('/home')
   }
 
   const goToSignup = () => {
@@ -34,11 +33,11 @@ export default function Login() {
       <form onSubmit={submitLogin}>
         <div className='form__inputs'>
           <div className='form__input'>
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input type="text" name="email" id="email" onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className='form__input'>
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" onChange={(e) => setPassword(e.target.value)} />
           </div>
         </div>

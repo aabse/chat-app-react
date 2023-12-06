@@ -1,6 +1,6 @@
 export const newMessage = async (roomId, message) => {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/messages`, {
+    let response = await fetch(`${import.meta.env.VITE_API_URL}/api/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -1,8 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './Chat.css'
 import * as messagesService from '../../services/messages.js'
 import { SocketContext } from '../../context/socketContext'
 import { UserContext } from '../../context/userContext'
+import PropTypes from 'prop-types'
+
+Chat.propTypes = {
+        room: PropTypes.object.isRequired,
+        roomName: PropTypes.node.isRequired,
+        active: PropTypes.bool.isRequired,
+        updateChatActive: PropTypes.func.isRequired,
+}
 
 export default function Chat({room, roomName, active, updateChatActive}) {
 
@@ -22,11 +30,11 @@ export default function Chat({room, roomName, active, updateChatActive}) {
     return () => {
       socket.off('chat message')
     }
-  }, [])
+  }, [socket])
 
   useEffect(() => {
     if (elemMessages) elemMessages.scrollTop = elemMessages.scrollHeight
-  }, [listMessages])
+  }, [listMessages, elemMessages])
 
   useEffect(() => {
     console.log(room?.messages)

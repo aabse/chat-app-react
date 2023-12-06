@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Chat from '../../components/Chat/Chat'
 import Contacts from '../../components/Contacts/Contacts'
 import Rooms from '../../components/Rooms/Rooms'
@@ -8,7 +8,7 @@ import './Home.css'
 
 export default function Home() {
 
-  const [roomSelected, setRoomSelected] = useState()
+  const [roomSelected, setRoomSelected] = useState(undefined)
   const [roomName, setRoomName] = useState('')
   const [chatActive, setChatActive] = useState(false)
   const socket = useContext(SocketContext)
@@ -43,7 +43,7 @@ export default function Home() {
           <Rooms updateRoomName={updateRoomName} updateRoomSelected={updateRoomSelected} />
           <Contacts updateRoomName={updateRoomName} updateRoomSelected={updateRoomSelected} />
         </div>
-        <Chat room={roomSelected} roomName={roomName} active={chatActive} updateChatActive={updateChatActive} />
+        { roomSelected && <Chat room={roomSelected} roomName={roomName} active={chatActive} updateChatActive={updateChatActive} />}
       </div>
       <div className="home__footer"></div>
     </section>

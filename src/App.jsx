@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import { SocketProvider } from './context/socketContext'
 import { UserProvider } from './context/userContext'
@@ -8,7 +8,6 @@ import Signup from './pages/Signup/Signup'
 import './services/interceptor.js'
 
 function App() {
-  const isAuthenticated = true
 
   return (
     <SocketProvider>
@@ -32,22 +31,6 @@ function App() {
       </UserProvider>
     </SocketProvider>
   )
-}
-
-function PublicRoute({ children }) {
-  const isAuth = isAuthenticated()
-  return (
-    !isAuth ? {children} : <Navigate to={'/home'} />
-  )
-}
-
-function isAuthenticated() {
-  return existCookie('token')
-}
-
-function existCookie(name) {
-  const regex = new RegExp(`(^| )${name}=([^;]+)`)
-  return document.cookie.match(regex)
 }
 
 export default App
