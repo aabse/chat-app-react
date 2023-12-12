@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import { SocketProvider } from './context/socketContext'
 import { UserProvider } from './context/userContext'
@@ -9,25 +9,29 @@ import './services/interceptor.js'
 
 function App() {
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Login />
+    },
+    {
+      path: "/login",
+      element: <Login />
+    },
+    {
+      path: "/signup",
+      element: <Signup />
+    },
+    {
+      path: "/home",
+      element: <Home />
+    }
+  ])
+
   return (
     <SocketProvider>
       <UserProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={ <Login /> } />
-            <Route 
-              path={"/login"}
-              element={ <Login /> } />
-            <Route
-              path="/signup"
-              element={ <Signup /> } />
-            <Route
-              path='/home'
-              element={ <Home /> } />
-          </Routes>
-        </BrowserRouter>
+        <RouterProvider router={router} />
       </UserProvider>
     </SocketProvider>
   )
