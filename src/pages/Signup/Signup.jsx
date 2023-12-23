@@ -29,57 +29,51 @@ export default function Signup() {
   }
 
   const submitSignup = handleSubmit((data) => {
-    if (isValid) {
-      signup(data)
-        .then(res => {
-          console.log(res)
-          user.setData(res)
-          window.localStorage.setItem('userData', JSON.stringify(res))
-          navigate('/home')
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    }
+    signup(data)
+      .then(res => {
+        console.log(res)
+        user.setData(res)
+        window.localStorage.setItem('userData', JSON.stringify(res))
+        navigate('/home')
+      })
+      .catch(error => {
+        console.log(error)
+      })
   })
 
-  const goToLogin = () => {
-    navigate('/login')
-  }
-  
   return (
     <section className='signup'>
       <form onSubmit={submitSignup}>
         <div className='form__inputs'>
           <div className='form__input'>
             <label htmlFor="email">Email</label>
-            <input type="email" className={errors.email? 'error-input':''} 
+            <input type="email" data-testid="signup-email-input" className={errors.email? 'error-input':''} 
               {...register('email', formOptions.email)} />
             {
-              errors.email && <span className='error-message'>{errors.email.message}</span>
+              errors.email && <span data-testid="signup-email-error" className='error-message'>{errors.email.message}</span>
             }
           </div>
           <div className='form__input'>
             <label htmlFor="password">Password</label>
-            <input type="password" className={errors.password && 'error-input'}
+            <input type="password" data-testid="signup-password-input" className={errors.password && 'error-input'}
               {...register('password', formOptions.password)} />
             {
-              errors.password && <span className='error-message'>{errors.password.message}</span>
+              errors.password && <span data-testid="signup-password-error" className='error-message'>{errors.password.message}</span>
             }
           </div>
           <div className='form__input'>
             <label htmlFor="passwordConfirm">Confirm Password</label>
-            <input type="password" className={errors.passwordConfirm && 'error-input'}
+            <input type="password" data-testid="signup-passwordConfirm-input" className={errors.passwordConfirm && 'error-input'}
               {...register('passwordConfirm', formOptions.passwordConfirm)} />
             {
-              errors.passwordConfirm && <span className='error-message'>{errors.passwordConfirm.message}</span>
+              errors.passwordConfirm && <span data-testid="signup-passwordConfirm-error" className='error-message'>{errors.passwordConfirm.message}</span>
             }
 
           </div>
         </div>
         <div className='form__buttons'>  
-          <button type="submit" className='button-submit'>Signup</button>
-          <a href="javascript:void(0)" onClick={goToLogin} className='button-link'>Go to Login</a>
+          <button type="submit" data-testid="signup-submit" className='button-submit'>Signup</button>
+          <a href="/login" className='button-link'>Go to Login</a>
         </div>
       </form>
       <div>

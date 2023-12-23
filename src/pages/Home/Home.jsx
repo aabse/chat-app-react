@@ -16,7 +16,6 @@ export default function Home() {
 
   useEffect(() => {
     const userData = window.localStorage.getItem('userData')
-    console.log(userData)
     user.setData(JSON.parse(userData))
   }, [])
 

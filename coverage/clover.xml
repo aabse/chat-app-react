@@ -1,248 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702092503189" clover="3.2.0">
-  <project timestamp="1702092503189" name="All files">
-    <metrics statements="174" coveredstatements="18" conditionals="32" coveredconditionals="0" methods="60" coveredmethods="0" elements="266" coveredelements="18" complexity="0" loc="174" ncloc="174" packages="9" files="14" classes="14"/>
+<coverage generated="1703298862497" clover="3.2.0">
+  <project timestamp="1703298862497" name="All files">
+    <metrics statements="155" coveredstatements="155" conditionals="36" coveredconditionals="33" methods="55" coveredmethods="55" elements="246" coveredelements="243" complexity="0" loc="155" ncloc="155" packages="10" files="14" classes="14"/>
     <package name="src">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/App.jsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="12" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="routes.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/routes.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Chat">
-      <metrics statements="36" coveredstatements="1" conditionals="8" coveredconditionals="0" methods="14" coveredmethods="0"/>
+      <metrics statements="36" coveredstatements="36" conditionals="8" coveredconditionals="6" methods="14" coveredmethods="14"/>
       <file name="Chat.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/components/Chat/Chat.jsx">
-        <metrics statements="36" coveredstatements="1" conditionals="8" coveredconditionals="0" methods="14" coveredmethods="0"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="83" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="93" count="0" type="stmt"/>
+        <metrics statements="36" coveredstatements="36" conditionals="8" coveredconditionals="6" methods="14" coveredmethods="14"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="19" count="11" type="stmt"/>
+        <line num="20" count="11" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+        <line num="22" count="11" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="36" count="11" type="stmt"/>
+        <line num="37" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="11" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="42" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="43" count="4" type="stmt"/>
+        <line num="46" count="11" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="50" count="11" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="62" count="11" type="stmt"/>
+        <line num="63" count="7" type="stmt"/>
+        <line num="64" count="7" type="stmt"/>
+        <line num="65" count="7" type="stmt"/>
+        <line num="66" count="7" type="stmt"/>
+        <line num="67" count="7" type="stmt"/>
+        <line num="70" count="11" type="stmt"/>
+        <line num="84" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="94" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Contacts">
-      <metrics statements="14" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
       <file name="Contacts.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/components/Contacts/Contacts.jsx">
-        <metrics statements="14" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="29" count="11" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="37" count="11" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Rooms">
-      <metrics statements="14" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
       <file name="Rooms.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/components/Rooms/Rooms.jsx">
-        <metrics statements="14" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="9" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.context">
-      <metrics statements="13" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="socketContext.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/context/socketContext.jsx">
-        <metrics statements="6" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="16" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="11" count="16" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
       </file>
       <file name="userContext.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/context/userContext.jsx">
-        <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="27" type="stmt"/>
+        <line num="9" count="27" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.pages.Home">
-      <metrics statements="19" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
       <file name="Home.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/pages/Home/Home.jsx">
-        <metrics statements="19" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="12" count="15" type="stmt"/>
+        <line num="13" count="15" type="stmt"/>
+        <line num="14" count="15" type="stmt"/>
+        <line num="15" count="15" type="stmt"/>
+        <line num="17" count="15" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="22" count="15" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="29" count="15" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="33" count="15" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="15" type="stmt"/>
       </file>
     </package>
     <package name="src.pages.Login">
-      <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
       <file name="Login.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/pages/Login/Login.jsx">
-        <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
+        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="8" count="39" type="stmt"/>
+        <line num="9" count="39" type="stmt"/>
+        <line num="10" count="39" type="stmt"/>
+        <line num="11" count="39" type="stmt"/>
+        <line num="13" count="39" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="39" type="stmt"/>
+        <line num="33" count="20" type="stmt"/>
+        <line num="37" count="16" type="stmt"/>
       </file>
     </package>
     <package name="src.pages.Signup">
-      <metrics statements="16" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="13" coveredstatements="13" conditionals="14" coveredconditionals="14" methods="5" coveredmethods="5"/>
       <file name="Signup.jsx" path="/Users/anabhi/practice/React/chat-app-react/src/pages/Signup/Signup.jsx">
-        <metrics statements="16" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
+        <metrics statements="13" coveredstatements="13" conditionals="14" coveredconditionals="14" methods="5" coveredmethods="5"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="27" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="11" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="44" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="44" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <metrics statements="21" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
       <file name="auth.js" path="/Users/anabhi/practice/React/chat-app-react/src/services/auth.js">
-        <metrics statements="10" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-      </file>
-      <file name="interceptor.js" path="/Users/anabhi/practice/React/chat-app-react/src/services/interceptor.js">
-        <metrics statements="8" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
       </file>
       <file name="messages.js" path="/Users/anabhi/practice/React/chat-app-react/src/services/messages.js">
-        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-      </file>
-      <file name="rooms.js" path="/Users/anabhi/practice/React/chat-app-react/src/services/rooms.js">
-        <metrics statements="16" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
-      <file name="users.js" path="/Users/anabhi/practice/React/chat-app-react/src/services/users.js">
-        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+    </package>
+    <package name="src.utils">
+      <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="customFetch.js" path="/Users/anabhi/practice/React/chat-app-react/src/utils/customFetch.js">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+      </file>
+      <file name="errorManager.js" path="/Users/anabhi/practice/React/chat-app-react/src/utils/errorManager.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
       </file>
     </package>
   </project>

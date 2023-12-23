@@ -2,31 +2,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import { SocketProvider } from './context/socketContext'
 import { UserProvider } from './context/userContext'
-import Home from './pages/Home/Home'
-import Login from './pages/Login/Login'
-import Signup from './pages/Signup/Signup'
-import './services/interceptor.js'
+import routesConfig from './routes'
 
 function App() {
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Login />
-    },
-    {
-      path: "/login",
-      element: <Login />
-    },
-    {
-      path: "/signup",
-      element: <Signup />
-    },
-    {
-      path: "/home",
-      element: <Home />
-    }
-  ])
+  const router = createBrowserRouter(routesConfig)
 
   return (
     <SocketProvider>

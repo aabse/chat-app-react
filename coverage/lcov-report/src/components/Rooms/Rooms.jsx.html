@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.14% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/14</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.14% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/14</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -108,45 +108,47 @@
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,41 +159,42 @@
 import * as roomsService from '../../services/rooms.js'
 import './Rooms.css'
 import PropTypes from 'prop-types'
+import { showError } from '../../utils/errorManager.js'
 &nbsp;
 Rooms.propTypes = {
         updateRoomName: PropTypes.func.isRequired,
         updateRoomSelected: PropTypes.func.isRequired,
 }
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >Rooms(</span>{updateRoomName, updateRoomSelected}) {
-  const [rooms, setRooms] = <span class="cstat-no" title="statement not covered" >useState([])</span>
+export default function Rooms({updateRoomName, updateRoomSelected}) {
+  const [rooms, setRooms] = useState([])
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    roomsService.getRoomsByNames(['general'])</span>
-      .then(<span class="fstat-no" title="function not covered" >re</span>s =&gt; {
-<span class="cstat-no" title="statement not covered" >        console.log(res)</span>
-<span class="cstat-no" title="statement not covered" >        setRooms(res)</span>
+  useEffect(() =&gt; {
+    roomsService.getRoomsByNames(['general'])
+      .then(res =&gt; {
+        setRooms(res)
       })
-      .catch(<span class="fstat-no" title="function not covered" >er</span>ror =&gt; {
-<span class="cstat-no" title="statement not covered" >        console.log(error)</span>
+      .catch(error =&gt; {
+        showError(error)
       })
   }, [])
 &nbsp;
-  const getRoom = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(r</span>oom) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    roomsService.getRoomById(room._id)</span>
-      .then(<span class="fstat-no" title="function not covered" >re</span>s =&gt; {
-<span class="cstat-no" title="statement not covered" >        updateRoomName(res.name)</span>
-<span class="cstat-no" title="statement not covered" >        updateRoomSelected(res)</span>
+  const getRoom = (room) =&gt; {
+    roomsService.getRoomById(room._id)
+      .then(res =&gt; {
+        updateRoomName(res.name)
+        updateRoomSelected(res)
       })
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;section className="rooms"&gt;
       &lt;ul&gt;
-        {rooms.map(<span class="fstat-no" title="function not covered" >(r</span>oom, key) =&gt; (
-<span class="cstat-no" title="statement not covered" >          &lt;li </span>
+        {rooms.map((room, key) =&gt; (
+          &lt;li 
             key={key} 
-            onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >getRoom(room)}</span>
+            data-testid={"room-" + key}
+            onClick={() =&gt; getRoom(room)}
             className="room"&gt;{room.name}&lt;/li&gt;
         ))}
       &lt;/ul&gt;
@@ -205,7 +208,7 @@ export default function <span class="fstat-no" title="function not covered" >Roo
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-09T03:28:23.174Z
+                at 2023-12-23T02:34:22.481Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

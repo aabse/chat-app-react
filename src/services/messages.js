@@ -8,8 +8,10 @@ export const newMessage = async (roomId, message) => {
       body: JSON.stringify({roomId,message}),
       credentials: 'include'
     })
-    return response.json()
+    if (response.ok) return response.json()
+    const errorMessage = `An error has occured: ${response.status}`
+    throw new Error(errorMessage)
   } catch (error) {
-    console.log(error)
+    return error
   }
 }

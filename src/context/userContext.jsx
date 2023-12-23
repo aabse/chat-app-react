@@ -6,10 +6,7 @@ const UserContext = createContext()
 const UserProvider = ({ children }) => {
   const [data, setData] = useState(undefined)
 
-  useEffect(() => {
-    console.log(data?.email)
-  }, [data])
-  return (
+    return (
     <UserContext.Provider value={{data, setData}}>
       {children}
     </UserContext.Provider>

@@ -24,26 +24,22 @@ export default function Login() {
     })
   }
 
-  const goToSignup = () => {
-    navigate('/signup')
-  }
-
   return (
-    <section className='login'>
+    <section role='login' className='login'>
       <form onSubmit={submitLogin}>
         <div className='form__inputs'>
           <div className='form__input'>
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" onChange={(e) => setEmail(e.target.value)} />
+            <input type="text" data-testid="login-email-input" name="email" id="email" onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className='form__input'>
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="password" onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" data-testid="login-password-input" name="password" id="password" onChange={(e) => setPassword(e.target.value)} />
           </div>
         </div>
         <div className='form__buttons'>
-          <button type="submit" className='login-submit'>Login</button>
-          <a href="javascript:void(0)" onClick={goToSignup} className='signup-link'>Sign up</a>
+          <button type="submit" data-testid="login-submit" className='login-submit'>Login</button>
+          <a href="/signup" className='signup-link'>Sign up</a>
         </div>
       </form>
     </section>

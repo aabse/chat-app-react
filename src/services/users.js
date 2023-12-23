@@ -1,4 +1,4 @@
-export const usersService = async () => {
+export const users = async () => {
   try {
     const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users`, 
     {

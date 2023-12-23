@@ -4,6 +4,7 @@ import * as messagesService from '../../services/messages.js'
 import { SocketContext } from '../../context/socketContext'
 import { UserContext } from '../../context/userContext'
 import PropTypes from 'prop-types'
+import { showError } from '../../utils/errorManager'
 
 Chat.propTypes = {
         room: PropTypes.object.isRequired,
@@ -54,7 +55,7 @@ export default function Chat({room, roomName, active, updateChatActive}) {
         setMessage('')
       })
       .catch(error => {
-        console.log(error)
+        showError(error)
       })
   }
 
@@ -67,10 +68,10 @@ export default function Chat({room, roomName, active, updateChatActive}) {
   }
 
   return (
-    <div className={'wrapper-chat ' + (active? 'active':'inactive')}>
+    <div data-testid="wrapper-chat" className={'wrapper-chat ' + (active? 'active':'inactive')}>
     <section className="chat">
       <div className='chat__header'>
-          <div className='back-button' onClick={handleBackButton}>
+          <div data-testid="chat-backButton" className='back-button' onClick={handleBackButton}>
             {'<'}
           </div>
           <div>
@@ -80,7 +81,7 @@ export default function Chat({room, roomName, active, updateChatActive}) {
       <div className='chat__messages' id='chat-messages'>
         <ul>
           {listMessages.map((msg,key) => (
-            <li key={key} className={(msg.user === user.data.id)? 'send':'receive'}>
+            <li key={key} className={(msg.user === user.data?.id)? 'send':'receive'}>
               <small className='username'>{msg.name}</small>
               <div>{msg.message}</div>
               <small className='time'>{timeMessage(msg.createdAt)}</small>
@@ -90,8 +91,8 @@ export default function Chat({room, roomName, active, updateChatActive}) {
       </div>
       <div className='chat__new-message'>
         <form onSubmit={sendMessage}>
-          <input type="text" autoComplete='off' name="new-message" value={message} onChange={(e) => setMessage(e.target.value)} />
-          <button type="submit">Enviar</button>
+          <input data-testid="chat-newMessage" type="text" autoComplete='off' name="new-message" value={message} onChange={(e) => setMessage(e.target.value)} />
+          <button data-testid="chat-sendMessage" type="submit">Enviar</button>
         </form>
       </div>
     </section>

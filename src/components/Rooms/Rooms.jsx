@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import * as roomsService from '../../services/rooms.js'
 import './Rooms.css'
 import PropTypes from 'prop-types'
+import { showError } from '../../utils/errorManager.js'
 
 Rooms.propTypes = {
         updateRoomName: PropTypes.func.isRequired,
@@ -14,11 +15,10 @@ export default function Rooms({updateRoomName, updateRoomSelected}) {
   useEffect(() => {
     roomsService.getRoomsByNames(['general'])
       .then(res => {
-        console.log(res)
         setRooms(res)
       })
       .catch(error => {
-        console.log(error)
+        showError(error)
       })
   }, [])
 
@@ -36,6 +36,7 @@ export default function Rooms({updateRoomName, updateRoomSelected}) {
         {rooms.map((room, key) => (
           <li 
             key={key} 
+            data-testid={"room-" + key}
             onClick={() => getRoom(room)}
             className="room">{room.name}</li>
         ))}
